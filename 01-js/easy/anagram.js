@@ -5,7 +5,14 @@
 */
 
 function isAnagram(str1, str2) {
+    str1=str1.toLowerCase().split("").sort().join("").trim();
+    str2=str2.toLowerCase().split("").sort().join("").trim();
+    console.log(str1+" abc "+str2);
 
+    if(str1.localeCompare(str2)==0){
+      return true;
+    }
+    return false;
 }
 
 module.exports = isAnagram;
